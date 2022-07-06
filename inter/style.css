@@ -1,0 +1,225 @@
+body{
+    font-family: 'poppins';
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+section.header h1{
+    margin-top: -35px;
+}
+section.header .menu{
+    width: 32px;
+    height: 18px;
+    margin-left: 20.8em;
+    margin-top: 2em;
+}
+section.header nav{
+    display: none;
+}
+section.background .mobile{
+    background-image: url(image-hero-mobile.png);
+    width: 730px;
+    background-repeat: no-repeat;
+    height: 800px;
+    transform: scale(.54);
+    margin-top: -8em;
+    margin-left: -12em;
+    animation: load 2s forwards;
+}
+@keyframes load{
+    from{
+        clip-path: polygon(0 0, 100% 0, 60% 0, 0 0);
+    }
+    to{
+        clip-path: polygon(0 1%, 100% 0, 100% 100%, 0 100%);
+    }
+}
+section.body{
+    animation: movedown 1s ease-in-out forwards;
+    opacity: 0;
+}
+@keyframes movedown{
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+section.body h1{
+    margin-top: -7.5em;
+    margin-left: -.1em;
+    text-align: center;
+    font-size: 2rem;
+}
+section.body p{
+    margin-left: .5em;
+    width: 350px;
+    text-align: center;
+}
+section.body button{
+    padding: 10px;
+    font-size: 1.4rem;
+    color: black;
+    background-color: rgb(228, 231, 17);
+    border: none;
+    border-radius: 10px;
+    margin-left: 5em;
+    margin-top: 1em;
+    animation: move-button .5s infinite;
+}
+@keyframes move-button{
+    from{
+        transform: translateY(5px)
+    }
+    to{
+        transform: translateY(0)
+    }
+}
+section.icons{
+    transform: scale(.7);
+    margin-top: 60px;
+    margin-left: -50px;
+}
+section.icons .data{
+    background-image: url(client-databiz.svg);
+    width: 114px; 
+    height: 20px;
+}
+section.icons .audio{
+    background-image: url(client-audiophile.svg);
+    width: 73px;
+    height: 36px;
+    margin-left: 160px;
+    margin-top: -25px;    
+}
+section.icons .meet{
+    background-image: url(client-meet.svg);
+    width: 90px;
+    height: 20px;
+    margin-left: 280px;
+    margin-top: -35px; 
+}
+section.icons .maker{
+    background-image: url(client-maker.svg);
+    width: 83px;
+    height: 24px;
+    margin-left: 400px;
+    margin-top: -25px; 
+}
+/* styling for desktop view */
+
+@media (min-width: 900px) {  
+    section.header li a{
+        transition: .4s ease;
+    }
+    section.header li a:hover{
+        background-color: unset;
+        color: yellow;
+    }
+    section.header h1{
+        margin-top: 20px;
+    }
+    section.header ul{
+        list-style-type: none;
+        display: flex;
+        margin-left: 100px;
+        margin-top: -45px;
+    }
+    section.header ul a{
+        text-decoration: none;
+        color: black;
+    }
+    section.header li{
+        padding: 0 10px;
+    }
+    section.header .menu{
+        display: none;
+    }
+    section.header nav{
+        display: block;
+    }
+    section.header .signup a{
+        text-decoration: none;
+        color: black;
+        transition: .4s ease;
+    }
+    section.header .signup .login:hover{
+        color: yellow;
+    }
+    section.header .signup{
+        margin-left: 73em;
+        margin-top: -42px;
+    }
+    section.header .signup button{
+        padding: 8px;
+        position: relative;
+        margin-left: 60px;
+        top: -30px;
+        width: 80px;
+        border-radius: 10px;
+        background: transparent;
+        border: 2px solid black;
+        transition: .4s ease;
+    }
+    section.header .signup button:hover{
+        background-color: yellow;
+    }
+    section.header .signup button a{
+        text-decoration: none;
+        color: black;
+    }
+    section.body button{
+        margin-left: -.1em;
+        transition: .4s ease;
+    }
+    section.body button:hover{
+        background-color: rgb(148, 161, 28);
+        color: white;
+    }
+    section.background .mobile{
+        display: none;
+    }
+    .background-desktop{
+        background-image: url(image-hero-desktop.png);
+        width: 500px;
+        height: 660px;
+        background-size: cover;
+        margin-top: -30px;
+        margin-left: 790px;
+        transform: scale(.8);
+        animation: load 2s forwards;
+    }
+    @keyframes load{
+        from{
+            clip-path: polygon(0 0, 100% 0, 60% 0, 0 0);
+        }
+        to{
+            clip-path: polygon(0 1%, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+    section.body{
+        margin-top: -280px;
+        margin-left: 100px;
+    }
+    section.body h1{
+        text-align: left;
+        font-size: 2.5rem;
+        width: 270px;
+        margin-top: -480px;
+    }
+    section.body p{
+        text-align: left;
+        margin-left: -.1em;
+        width: 400px;
+    }
+    section.icons{
+        transform: scale(1);
+        margin-left: 105px;
+        margin-top: 70px;
+    }
+
+}
